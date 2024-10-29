@@ -1,0 +1,128 @@
+/* Basic styling */
+.header {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 2rem;
+  background-color: #c88509;
+  color: #fff;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.blogs-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+ 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation-duration: 0.7s;
+  animation-name: fadeInDown;
+  animation-timing-function: ease-out;
+}
+
+
+.tfi-icon {
+  display: none; /* Hide by default */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .tfi-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .navigation {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 70%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /* Add your CSS styles here */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.sidebar button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+}
+
